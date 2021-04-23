@@ -9,8 +9,13 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <script src="js/jquery.js"></script>
 
     <title>Indicadores COVID-19 Córdoba</title>
+
+
+    
+
   </head>
   <body>
 
@@ -50,57 +55,36 @@
 
 
     <div class="container p-2">
-        <h1>Indicadores del departamento</h1>
+        
         <div class="row p-3">
           <div class="col-sm-9">
-                
+                <h3>Vacunas Recibidas</h3>
+                <hr>
                 <table class="table">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Municipio</th>
-                        <th scope="col">Positivos</th>
-                        <th scope="col">Recuperados</th>
-                        <th scope="col">Activos</th>
+                        <th scope="col">Laboratorio</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Destino</th>
+                        <th scope="col">&nbsp;</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <th scope="row">Cerete</th>
-                        <td>100</td>
-                        <td>90</td>
-                        <td>10</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <th scope="row">Sahagun</th>
-                        <td>50</td>
-                        <td>40</td>
-                        <td>10</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <th scope="row">Cerete</th>
-                        <td>30</td>
-                        <td>25</td>
-                        <td>5</td>
-                      </tr>
+                    <tbody id="body-tabla">
                     </tbody>
                   </table>
 
-                  <h3>Fallecidos</h3>
-
+                  
+                  <hr>
                   <div>
                     <canvas id="myChart"></canvas>
                   </div>
                   
           </div>
           <div class="col-sm-3">
+            <h5>Menu Principal</h5>
             <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                Indicadores Generales
-                </a>
+                <a href="#" class="list-group-item list-group-item-action" id="general">Vacunas Recibidas</a>
                 <a href="#" class="list-group-item list-group-item-action">Proyecciones</a>
                 <a href="#" class="list-group-item list-group-item-action">Reporte de camas UCI</a>
                 <a href="#" class="list-group-item list-group-item-action">Geolocalización</a>
@@ -124,45 +108,116 @@
     -->
 
     <script>
-      var ctx = document.getElementById('myChart');
 
-      var etiquetas = ['Monteria', 'Cerete', 'Lorica', 'Sahagun', 'Tierralta', 'Valencia']
-      var valores = [124, 196, 73, 85, 92, 93]
+        // OnClick con javascript
 
-      var myChart = new Chart(ctx, {
-          type: 'bar',
-          data: {
-              labels: etiquetas,
-              datasets: [{
-                  label: '# de positivos',
-                  data: valores,
-                  backgroundColor: [
-                      'rgba(255, 99, 132, 0.2)',
-                      'rgba(54, 162, 235, 0.2)',
-                      'rgba(255, 206, 86, 0.2)',
-                      'rgba(75, 192, 192, 0.2)',
-                      'rgba(153, 102, 255, 0.2)',
-                      'rgba(255, 159, 64, 0.2)'
-                  ],
-                  borderColor: [
-                      'rgba(255, 99, 132, 1)',
-                      'rgba(54, 162, 235, 1)',
-                      'rgba(255, 206, 86, 1)',
-                      'rgba(75, 192, 192, 1)',
-                      'rgba(153, 102, 255, 1)',
-                      'rgba(255, 159, 64, 1)'
-                  ],
-                  borderWidth: 1
-              }]
-          },
-          options: {
-              scales: {
-                  y: {
-                      beginAtZero: true
-                  }
-              }
-          }
-      });
+        var ctx = document.getElementById('myChart');
+
+        var etiquetas = []
+        var valoresGrafico = []
+
+        function descardarDatos() 
+        {
+              $.ajax({
+                  method: "GET",
+                  url: "https://www.datos.gov.co/resource/sdvb-4x4j.json?nom_territorio=CORDOBA"
+                
+              })
+              .done(function( respuesta ) {
+
+                  var tblBody = document.getElementById("body-tabla");
+
+
+                  // Recorremos el conjunto de datos
+                  respuesta.forEach(function(municipio, idx) { 
+
+                      valoresGrafico.push(municipio.cantidad)
+                      etiquetas.push(municipio.laboratorio_vacuna)
+                        
+                        // Crea una fila
+                        var fila = document.createElement("tr");
+
+                        // Celda Fecha
+                        var celda = document.createElement("td");
+                        var texto = document.createTextNode(idx + 1);
+                        celda.appendChild(texto);
+                        fila.appendChild(celda);
+
+                        // Celda Laboratorio
+                        var celda2 = document.createElement("td");
+                        celda2.appendChild( document.createTextNode(municipio.laboratorio_vacuna) )
+                        fila.appendChild(celda2);
+                        
+                        // Celda Cantidad
+                        var celda3 = document.createElement("td");
+                        celda3.appendChild( document.createTextNode(municipio.cantidad) )
+                        fila.appendChild(celda3);
+                        
+                        // Celda Uso Vacuna
+                        var celda4 = document.createElement("td");
+                        celda4.appendChild( document.createTextNode(municipio.uso_vacuna) )
+                        fila.appendChild(celda4);
+                        
+                        var celda5 = document.createElement("td");
+                        celda5.appendChild( document.createTextNode("Ver Detalle") )
+                        fila.appendChild(celda5);
+
+
+                        tblBody.appendChild(fila)
+                  });
+
+
+                  var myChart = new Chart(ctx, {
+                          type: 'bar',
+                          data: {
+                              labels: etiquetas,
+                              datasets: [{
+                                  label: '# total de vacunas',
+                                  data: valoresGrafico,
+                                  backgroundColor: [
+                                      'rgba(255, 99, 132, 0.2)',
+                                      'rgba(54, 162, 235, 0.2)',
+                                      'rgba(255, 206, 86, 0.2)',
+                                      'rgba(75, 192, 192, 0.2)',
+                                      'rgba(153, 102, 255, 0.2)',
+                                      'rgba(255, 159, 64, 0.2)'
+                                  ],
+                                  borderColor: [
+                                      'rgba(255, 99, 132, 1)',
+                                      'rgba(54, 162, 235, 1)',
+                                      'rgba(255, 206, 86, 1)',
+                                      'rgba(75, 192, 192, 1)',
+                                      'rgba(153, 102, 255, 1)',
+                                      'rgba(255, 159, 64, 1)'
+                                  ],
+                                  borderWidth: 1
+                              }]
+                          },
+                          options: {
+                              scales: {
+                                  y: {
+                                      beginAtZero: true
+                                  }
+                              }
+                          }
+                      });
+
+                  
+              });
+        }
+
+        var el = document.getElementById("general")
+        el.addEventListener("click", descardarDatos)
+
+    </script>
+
+
+    <script>
+      
+     
+      // var valores = [124, 196, 73, 85, 92, 93]
+
+      
       </script>
   </body>
 </html>
