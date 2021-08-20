@@ -1,4 +1,4 @@
 # Códigos Fuente de Ejemplos
-## Clase: Desarollo Web
+## Clase: Desarrollo Web
 ## 2021
 
