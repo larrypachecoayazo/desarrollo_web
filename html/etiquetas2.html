@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Mi primer documento HTML</title>
+
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/misestilos.css">
+</head>
+<body>
+	<div>
+		<div class="cabecera" style="width: 70%;  float: left;">
+			Esto es un div 1
+		</div>
+		<div class="cabecera" style="width: 28%; float: right;">
+			Esto es un div 2
+		</div>
+	</div>
+	<br><br><br><br><br>
+	<h1 id="encabezado" class="formato">Mi Primera Página</h1>
+
+	<img src="imagenes/dw.jpg" alt="Encabezado" style="width: 100%;">
+
+	<form action="insertar.php" method="POST">
+
+	<h3 class="formato">Formularios</h3>
+
+	<table>
+		<tr>
+			<td><label>Identificación</label></td>
+			<td><input type="number" name="identificacion"></td>
+		</tr>
+		<tr>
+			<td><label>Nombres</label></td>
+			<td><input type="text" name="nombres"></td>
+		</tr>
+		<tr>
+			<td><label>Apellidos</label></td>
+			<td><input type="text" name="apellidos"></td>
+		</tr>
+		<tr>
+			<td><label>Contraseña</label></td>
+			<td><input type="password" name="contrasena"></td>
+		</tr>
+		<tr>
+			<td><label>Observaciones</label></td>
+			<td><textarea name="observacion"></textarea></td>
+		</tr>
+		<tr>
+			<td><label>Fotografía</label></td>
+			<td><input type="file" name="foto"></td>
+		</tr>
+		<tr>
+			<td><label>Género</label></td>
+			<td>
+				<select name="genero">
+					<option value="masculino">Masculino</option>
+					<option value="femenino">Femenino</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Enviar Datos" name=""></td>
+			<td></td>
+		</tr>
+	</table>
+	</form>
+	 
+	<h1 class="formato">Encabezados </h1>
+	<hr>
+
+	<h1>Encabezado H1</h1>
+	<h2>Encabezado H2</h2>    
+    <h3>Encabezado H3</h3>
+    <h4>Encabezado H4</h4>
+    <h5>Encabezado H5</h5>
+
+    <hr>
+
+    <h4>Temas</h4>
+    <ul>
+        <li>Unidad 1 - Protocolo HTTP</li>
+        <li>Unidad 2 - HTML + CSS</li>
+        <li>Unidad 3 - JavaScript</li>
+        <li>Unidad 4 - AJAX</li>
+    </ul>
+    <ol>
+        <li>Unidad 1 - Protocolo HTTP</li>
+        <li>Unidad 2 - HTML + CSS</li>
+        <li>Unidad 3 - JavaScript</li>
+        <li>Unidad 4 - AJAX</li>
+    </ol>
+
+
+    <hr>
+    <h3>Enlaces</h3>
+
+    <a href="enlace.html">Enlace a archivo enlace.html</a>   <br>
+    <a href="../web-ejemplo/index.html">Enlace a archivo web ejemplo</a>
+
+    <hr>
+    <h3>Parrafo</h3>
+
+    <p>Diseñado para que nos resulte más fácil colocar las cosas en una dimensión, <img src="imagenes/banner.jpg" alt="Encabezado" style="height: 50px; width: 50px;"> ya sea como una fila o como una columna.         Para usar flexbox, se aplica display: flex al elemento padre de los elementos que desea diseñar; Todos sus hijos directos se convierten en elementos flexibles.
+    </p>
+
+    <p>El contenido de título, también llamado de cabecera o de encabezado, define el título de una sección ( o subtítulo, si se encuentra subordinado dentro de un elemento. La sección puede haber sido marcada explícitamente por un elemento de contenido de seccionamiento o definido implícitamente por la etiqueta de cabecera según las reglas del algoritmo de esquematizado del documento
+    </p>
+
+    <hr>
+    <h3>Tablas</h3>
+
+    <table border="1">
+
+    	<tr>
+    		<td colspan="2"><strong>Datos Personales</strong></td>
+    	</tr>
+
+    	<tr>
+    		<td><strong>Identificación</strong></td>
+    		<td>1010101010</td>
+    	</tr>
+
+    	<tr>
+    		<td><strong>Nombres</strong></td>
+    		<td>Juan</td>
+    	</tr>
+    	<tr>
+    		<td><strong>Apellidos</strong></td>
+    		<td>Perez</td>
+    	</tr>
+    </table>
+
+</body>
+</html>

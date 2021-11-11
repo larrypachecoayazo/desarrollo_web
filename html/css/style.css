@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Mochiy+Pop+P+One&family=Roboto:ital,wght@1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+
+
+.lista{
+	font-weight: bold;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+p, ul, ol{
+	font-size: 30px;
+	/* font-family: 'Roboto', sans-serif; */
+	font-family: 'Lobster', cursive;
+
+}
+
+.imagen{
+	width: 200px;
+	border-width: 20px;
+	border-color: red;
+	border-style: dashed;
+	border-radius: 10%;
+}
+
+.contenedor-listas{
+	background-color: blue;
+}
+
+#titulo{
+	font-size: 30px;
+	color: red;
+	font-family: 'Lobster', cursive;
+}
+
+input[radio]{
+	margin: 15px;
+}
+
+a[href="http://www.unicordoba.edu.co"] {
+	color: red;
+}

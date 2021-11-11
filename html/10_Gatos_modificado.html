@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Apliación para gatos</title>
+	<link href="css/style2.css" rel="stylesheet">
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Mochiy+Pop+P+One&family=Roboto:ital,wght@1,100&display=swap');
+	</style>
+
+	
+
+</head>
+<body>
+
+	<h1 style="color: green; text-align: center; font-size:25px">Aplicación para gatos</h1>
+
+	
+	<main>
+		<h3 class="miestilo" style="font-family: 'Mochiy Pop P One', sans-serif;">Imágenes para gatos</h3>
+		<p>Haz click aquí para <a src="#">ver más imagenes de gatos</p>
+		<img src="https://bit.ly/fcc-relaxing-cat" alt="Imagen de gato">
+		<hr>
+		<h3 class="miestilo">Listas de gatos</h3>
+
+		<div>
+			<p>Cosas que los gatos aman</p>
+			<ul>
+				<li>La leche</li>
+				<li>Pescado</li>
+				<li>Dormir</li>
+			</ul>
+		</div>
+
+		<hr>
+		<h3 class="miestilo">Elementos de formulario</h3>
+		<form action="procesar.php" method="post"> 
+			<table border="0">
+				<thead>
+					<tr>
+						<td><strong>Campo</strong></td>
+						<td><strong>Valor</strong></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Identificación</strong></td>
+						<td><input type="number" name="identificacion"></td>					
+					</tr>
+					<tr>
+						<td><strong>Nombre completo</strong></td>
+						<td><input type="text" name="nombre" placeholder="nombre y apellido"></td>					
+					</tr>
+					<tr>
+						<td><strong>Género</strong></td>
+						<td>
+							<select name="genero">
+								<option value="0">Seleccione el género...</option>
+								<option value="1">Masculino</option>
+								<option value="2">Femenino</option>
+							</select>
+						</td>					
+					</tr>
+					<tr> 
+						<td colspan="2">
+							<input type="submit" value="Enviar Datos">
+						</td>					
+					</tr>
+				</tbody>				
+			</table>
+			
+			
+			<br>
+			
+			
+<br>
+			Género
+			
+<br>
+			Foto
+			<input type="file" name="">
+<br>
+			Acepta envío de correos 
+			<input type="checkbox" name="">
+
+			<label><input type="radio" name="r">Interior</label>
+			<br>
+			<label><input type="radio" name="r">Exterior</label>
+			<br>
+			<input type="text" name="" placeholder="URL de la foto">
+			<br>
+			<label><input type="checkbox" name="">Perezoso</label>
+			<label><input type="checkbox" name="">Enérgico</label>
+			<label><input type="checkbox" name="">Cariñoso</label>
+			<button>Enviar</button>
+		</form>
+	</main>
+
+	<footer>
+		<p>Página curso de desarrollo web <a href="http://www.unicordoba.edu.co">Unicordoba</a></p>
+	</footer>
+	
+	
+
+</body>
+</html>

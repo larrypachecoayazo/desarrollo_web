@@ -1,0 +1,24 @@
+p { 
+    color: red; 
+    width: 500px; 
+    border: 1px solid black; 
+} 
+input, textarea {
+    border: 1px solid #3575b6;
+    background-color: #a8c9eb;
+}
+
+.cabecera{
+    background-color: #9db9d6;
+    border: 2px solid #56799b;
+    text-align: center;
+    color: #224466; 
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+.boton{
+    background-color: #3575b6;
+    color: white;
+    border-color: #56799b;
+    border: 1px solid #1b3b5c;
+}

@@ -22,15 +22,17 @@ class UsuariosController {
         //     "Hola"    =>"Soy Víctor Robles"
         // ));
 
+        // Llamar al modelo
+        // Ejecutar una consulta SQL
+        // Obtener los resultados
+
         $data = [
             'nombre'    => 'DESARROLLO WEB',
             'semestre'  => 'NOVENO'
-        ];
-
-        // Modelo
-        
+        ];        
 
         // require_once '../view/'.$vista.'View.php';
         require_once 'view/listarView.php.html';
     }
+    
 }

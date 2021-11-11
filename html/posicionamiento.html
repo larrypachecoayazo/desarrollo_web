@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Posicionamiento</title>
+
+	<meta charset="utf-8">
+
+
+	<style type="text/css">
+
+
+
+		
+		.central {
+			  width: 700px;
+			  margin: 0 auto;
+			  margin-top: 56px;
+			  border: 5px solid grey;
+		}
+
+		
+		
+		p {			
+		    background-color: rgb(207,232,220);
+		    border: 2px solid rgb(79,185,227);
+		    padding: 10px;
+		    margin: 10px;
+		    border-radius: 5px;
+		}
+
+
+		/*
+		 *  Relative:  Relativa a su posición normal. Se mueven dependiente su posición normal;
+		 *
+		 */
+
+		
+		.relativo {
+			position: relative;
+			left: 50px;
+			top: 15px;
+			  background: rgba(255,84,104,.3);
+			  border: 2px solid rgb(255,84,104);
+			  
+		}
+
+		
+		
+
+		/**
+		 *  Absolute: Posición absoluta, pero relativa al contenedor
+		 *            Se usando compensaciones de los bordes del bloque
+		 *
+		 */
+
+		.positioned {
+		    position: absolute;
+			top: 40px;
+		    left: 10px; 			
+		    background: rgb(203, 231, 40);
+		    border: 2px solid rgb(255,84,104);
+		    
+			width: 450px;
+		}
+		.positioned2 {
+		    position: absolute;
+		    background: rgb(203, 231, 40);
+		    border: 2px solid rgb(255,84,104);
+		    top: 40px;
+		    left: 484px; 
+			width: 164px;
+		}
+
+
+		.fijo {
+		    position: fixed;
+		    top: 5px;
+		    left: 30px;
+		    height: 30px;
+		    background: rgba(255,84,104,.3);
+		    width: 95%;
+		    color: white;
+		    padding: 10px;
+		    border: 1px solid red;
+		}
+
+		
+		.sticky {
+			position: sticky;
+			top: 5px;
+			left: 30px;	
+			height: 30px;	  
+			background-color: yellow;
+			border: 1px solid orange;
+			padding: 10px;
+		}
+	
+
+	</style>
+
+</head>
+<body>
+
+	
+
+
+<div class="central">
+
+	<div style="padding: 10px; border: 1px solid #883399; position: relative;">
+
+	<div class="fijo">Fixed</div>
+
+		<p>Parrafo 1.</p>
+		<p>Parrafo 2.</p>
+		<p>Parrafo 3.</p>
+
+	<h1>Posicionamiento</h1>
+
+<p>Soy un elemento básico a nivel de bloque</p>
+<p class="positioned">Posicionamiento Absoluta</p>
+<p class="positioned2">Absoluta</p>
+<p class="relativo">Posicionamiento relativa</p>
+
+
+
+<p>Lorem ipsum dolor sit amet, elit consectetur adipiscing. Sin luto por cualquier consumidor, en lorem vel vulputate. DUIs Orci felis, pulvinar Identificación del metus ut, rutrum luctus Orci. Mañana financiación innovadora ahora, rhoncus ante Tellus, zanahorias. Sin embargo, el autor de la masa corriendo a la puerta. Reservado, el tanque muy sonido del aire interior o, tirar de las redes de aplicación. Curabitur vehicula Tellus ñeque, et malesuada, y adornado fuera de la. En el valle de los lagos. El gluten. imperdiet Suspendisse ac Phasellus. Los extremos de la sollicitudin Aenean eros un temblor en todo el país. Ut tarea de fútbol vel de impacto. Y de la que no hay ni Proin blandit urna lacus varius commodo. Así es el fútbol fútbol, ​​necesitan cálido sapiens.</p>
+<div class="sticky">Sticky</div>
+<p>Nam vulputate diámetro ncp tempor bibendum. Hasta luto propaganda et consectetuer fugas. película Nam está dispuesto a ser una gran cantidad de proteínas, antioxidantes, pero lo es. De hecho, esta es siempre la risa de un hombre delante de algunos lorem consectetur eget. Vivir el dolor desarrollador triste, pero si cualquiera de las inspecciones recibe. Mauris ultricies lectus sed lobortis los extremos de la. Viven olla apuestas de fútbol necesita ningún tipo de dibujos animados de televisión correr al aire libre. A chili que facilita la proteína. Cuando tirones Rayos Super Bowl montañas al instante.</p>
+<p>Lorem ipsum dolor sit amet, elit consectetur adipiscing. Sin luto por cualquier consumidor, en lorem vel vulputate. DUIs Orci felis, pulvinar Identificación del metus ut, rutrum luctus Orci. Mañana financiación innovadora ahora, rhoncus ante Tellus, zanahorias. Sin embargo, el autor de la masa corriendo a la puerta. Reservado, el tanque muy sonido del aire interior o, tirar de las redes de aplicación. Curabitur vehicula Tellus ñeque, et malesuada, y adornado fuera de la. En el valle de los lagos. El gluten. imperdiet Suspendisse ac Phasellus. Los extremos de la sollicitudin Aenean eros un temblor en todo el país. Ut tarea de fútbol vel de impacto. Y de la que no hay ni Proin blandit urna lacus varius commodo. Así es el fútbol fútbol, ​​necesitan cálido sapiens.</p>
+<p>Nam vulputate diámetro ncp tempor bibendum. Hasta luto propaganda et consectetuer fugas. película Nam está dispuesto a ser una gran cantidad de proteínas, antioxidantes, pero lo es. De hecho, esta es siempre la risa de un hombre delante de algunos lorem consectetur eget. Vivir el dolor desarrollador triste, pero si cualquiera de las inspecciones recibe. Mauris ultricies lectus sed lobortis los extremos de la. Viven olla apuestas de fútbol necesita ningún tipo de dibujos animados de televisión correr al aire libre. A chili que facilita la proteína. Cuando tirones Rayos Super Bowl montañas al instante.</p>
+<p>Lorem ipsum dolor sit amet, elit consectetur adipiscing. Sin luto por cualquier consumidor, en lorem vel vulputate. DUIs Orci felis, pulvinar Identificación del metus ut, rutrum luctus Orci. Mañana financiación innovadora ahora, rhoncus ante Tellus, zanahorias. Sin embargo, el autor de la masa corriendo a la puerta. Reservado, el tanque muy sonido del aire interior o, tirar de las redes de aplicación. Curabitur vehicula Tellus ñeque, et malesuada, y adornado fuera de la. En el valle de los lagos. El gluten. imperdiet Suspendisse ac Phasellus. Los extremos de la sollicitudin Aenean eros un temblor en todo el país. Ut tarea de fútbol vel de impacto. Y de la que no hay ni Proin blandit urna lacus varius commodo. Así es el fútbol fútbol, ​​necesitan cálido sapiens.</p>
+
+
+</div>
+<!--
+
+
+
+
+
+
+
+
+
+
+<h1>Positioning</h1>
+
+<p>I am a basic block level element.</p>
+<p class="positioned">I am a basic block level element.</p>
+<p>I am a basic block level element.</p>
+
+
+
+
+</div>
+
+-->
+
+</div>
+
+</body>
+</html>

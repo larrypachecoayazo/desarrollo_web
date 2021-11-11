@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Apliación para gatos</title>
+	<style type="text/css">
+		input{
+			border: 1px solid blue;
+			background-color: #d6ebff;
+		}
+		h3{
+			color: red;
+		}
+
+		h2 {
+			color: purple;
+		}
+
+		p{
+			color: green;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<h1 style="color:blue" id="titulo">Aplicación para gatos</h1>
+
+	<main>
+		<h3>Imágenes para gatos</h3>
+		<p class="lista">Haz click aquí para <a src="#">ver más imagenes de gatos</p>
+		<img src="https://bit.ly/fcc-relaxing-cat" alt="Imagen de gato" class="imagen">
+		<hr>
+		<h3>Listas de gatos</h3>
+
+		<div class="contenedor-listas">
+			<p>Cosas que los gatos aman</p>
+			<ul class="lista">
+				<li>La leche</li>
+				<li>Pescado</li>
+				<li>Dormir</li>
+			</ul>
+		</div>
+
+		<h2>Preferencias</h2>
+		<form action="procesar.php" method="post">
+
+			<table>
+				<thead>
+					<tr>
+						<th>Campo</th>
+						<th>Valor</th>
+					</tr>
+				</thead>
+				<tbody>
+						<tr>
+							<td>Identificación</td>
+							<td><input type="number" name="identificacion"></td>
+						</tr>
+						<tr>
+							<td><label for="nombres">Nombres</label></td>
+							<td><input type="text" placeholder="Escriba aquí el nombre"  id="nombres" name="nombres"></td>
+						</tr>
+						<tr>
+							<td>Fecha</td>
+							<td><input type="date" name=""></td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td><input type="text" name=""></td>
+						</tr>
+						<tr>
+							<td>Género</td>
+							<td>
+								<select>
+									<option value="">Seleccione el género...</option>
+									<option value="1">Masculino</option>
+									<option value="2">Femenino</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Acepta los términos</td>
+							<td><input type="checkbox" name=""></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="submit" value="Enviar Formulario"></td>
+						</tr>
+					</tbody>				
+			</table>
+			
+		</form>
+		<br><br><br><br><br>
+		<form>
+			<label><input type="radio" name="r">Interior</label>
+			<br>
+			<label><input type="radio" name="r">Exterior</label>
+			<br>
+			<input type="text" name="" placeholder="URL de la foto">
+			<br>
+			<label><input type="checkbox" name="">Perezoso</label>
+			<label><input type="checkbox" name="">Enérgico</label>
+			<label><input type="checkbox" name="">Cariñoso</label>
+			<button>Enviar</button>
+		</form>
+	</main>
+
+	<footer>
+		<p>Página curso de desarrollo web <a href="http://www.unicordoba.edu.co">Unicordoba</a></p>
+	</footer>
+
+</body>
+</html>

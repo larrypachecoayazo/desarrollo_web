@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Documento HTML</title>
+	<meta charset="UTF-8">
+
+	
+
+	<style type="text/css">
+
+		@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+		h1, h2, h3, h4, h5 {
+			color: #6c92b8;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		.encabezado {
+			border: 1px solid #6c92b8;
+			padding: 5px;
+			margin: 5px;
+		}
+
+		input {
+			border: 1px solid #6c92b8;
+			background-color: #cddeee;
+		}
+
+		.cabecera{
+			font-size: 30px;
+			text-align: center;
+			background-color: #cddeee;
+			color: #3c6ea0;
+			font-family: 'Roboto', sans-serif;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div class="cabecera" id="cabecera">Mi Primera Página HTML</div>
+	<div class="encabezado">Contenido</div>
+
+	<br>
+	<img src="imagenes/dw.jpg">
+
+
+	<hr>
+	<h3  class="cabecera">Formularios</h3>
+
+	<table>
+	<form action="insertar.php" method="POST">
+
+		<tr>
+			<td>Identificación</td>
+			<td><input type="number"  name="identificacion"></td>
+		</tr>
+		<tr>
+			<td>Nombre</td>
+			<td><input type="text"  name="nombre"></td>
+		</tr>
+		<tr>
+			<td>Contraseña</td>
+			<td><input type="password"  name="password"></td>
+		</tr>
+		<tr>
+			<td>Observaciones</td>
+			<td><textarea name="observacion"></textarea></td>
+		</tr>
+		<tr>
+			<td>Aceptar Terminos</td>
+			<td><input type="checkbox" name="acepto"></td>
+		</tr>
+		<tr>
+			<td>Genero</td>
+			<td><input type="radio" name="genero"> Masculino
+		       <input type="radio" name="genero"> Femenino</td>
+		</tr>
+		<tr>
+			<td>Foto </td>
+			<td><input type="file" name="foto"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Enviar Datos" name=""></td>
+			<td></td>
+		</tr>
+	</form>
+	</table>
+
+
+	<hr>
+	<h3 class="cabecera">Enlace o Hipervinculos</h3>
+
+    <a href="enlace.html">Hipervinculo a archivo enlace.html</a>  
+    <a href="imagenes/comunicaciones2.png">Descargar imagen</a>  
+
+    <a href="../web-ejemplo/index.html">Enlace a archivo web ejemplo</a>
+
+
+	<hr>
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/bxOJl-gEzSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<h1  class="cabecera" >Encabezado H1</h1>
+
+
+	<h2>Encabezado H2</h2>
+    <h3>Encabezado H3</h3>
+    <h4>Encabezado H4</h4>
+    <h5>Encabezado H5</h5>	
+
+    <hr>
+    <h3 class="cabecera">Parrafo</h3>
+
+    <p>Diseñado para que nos resulte más fácil colocar las cosas en una dimensión, ya sea como una fila o como una columna.         Para usar flexbox, se aplica display: flex al elemento padre de los elementos que desea diseñar; Todos sus hijos directos se convierten en elementos flexibles.
+    </p>
+    <br><br><br>
+    <p>El contenido de título, también llamado de cabecera o de encabezado, define el título de una sección ( o subtítulo, si se encuentra subordinado dentro de un elemento. La sección puede haber sido marcada explícitamente por un elemento de contenido de seccionamiento o definido implícitamente por la etiqueta de cabecera según las reglas del algoritmo de esquematizado del documento
+    </p>
+
+    <hr>
+
+    <h4>Temas</h4>
+    <ul>
+        <li>Unidad 1 - Protocolo HTTP</li>
+        <li>Unidad 2 - HTML + CSS</li>
+        <li>Unidad 3 - JavaScript</li>
+        <li>Unidad 4 - AJAX</li>
+    </ul>
+    <ol>
+        <li>Unidad 1 - Protocolo HTTP</li>
+        <li>Unidad 2 - HTML + CSS</li>
+        <li>Unidad 3 - JavaScript</li>
+        <li>Unidad 4 - AJAX</li>
+    </ol>
+
+
+    <hr>
+    <h3>Tablas</h3>
+
+    <table border="1">
+
+    	<tr>
+    		<td colspan="2"><strong>Datos Personales</strong></td>
+    	</tr>
+
+    	<tr>
+    		<td><strong>Identificación</strong></td>
+    		<td>1010101010</td>
+    	</tr>
+
+    	<tr>
+    		<td><strong>Nombres</strong></td>
+    		<td>Juan</td>
+    	</tr>
+    	
+    	<tr>
+    		<td><strong>Apellidos</strong></td>
+    		<td>Perez</td>
+    	</tr>
+    </table>
+
+</body>
+</html>
